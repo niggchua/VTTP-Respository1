@@ -25,7 +25,6 @@ public class App
         
 
         Integer age = 28;
-
         System.out.printf("%s is %d years old.", name, age);
 
         String mother_name = "Aichoo";
@@ -35,20 +34,58 @@ public class App
 
 		// Slide 17
 
-		String input = con.readLine("What is your hobby?");
+		String input = con.readLine("\nWhat is your hobby?");
 		input.trim(); // "    swim      " ---> "swim"
 
 		if (input.equals("swim")) {
 			System.out.println("The nearest swimming pool is clementi if you fancy a " + input);
 		} else if (input.equals("jog")) {
 			System.out.println("The nearest park you can go for a run is at Bishan park");				
+		} else if (input.equals("cycle")) {
+			System.out.println("You could cycle at the park connector");
 		} else {
-			System.out.println("seems like you are a boring person without any interesting hobbies.");
+			System.out.println("Tell me more about this hobby of yours.");
 
 
 		}
 
+		// Slide 18
+		// Switch statement
+
+		switch (input) {
+			case "swim":
+				System.out.println("The nearest swimming pool is clementi if you fancy a " + input);
+				break;
+			case "jog":
+				System.out.println("The nearest park you can go for a run is at Bishan park");
+				break;
+			case "cycle":
+				System.out.println("You could cycle at the park connector");
+				break;
+			default: 
+				System.out.println("Tell me more about this hobby of yours.");
+				break;
+		}
 
 
+		// Slide 19
+		Integer myAge =0;
+		String inputAge = con.readLine("What is your age?");
+
+		myAge = Integer.parseInt(inputAge);
+
+		if (myAge >=0 && myAge <= 2) {
+			System.out.println("you are a baby");
+		} else if (myAge > 2 && myAge <= 4) {
+			System.out.println("You are a toddler");
+		} else if (myAge > 4 && myAge <= 12) {
+			System.out.println("You are a child");
+		} else if (myAge > 12 && myAge <= 19) {
+			System.out.println("You are a teenager");
+		} else if (myAge > 19 && myAge <= 50) {
+			System.out.println("You are an adult");
+		} else {
+			System.out.println("You are a senior citizen");
+		}
     }
 }
