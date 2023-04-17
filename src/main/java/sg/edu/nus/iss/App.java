@@ -14,7 +14,7 @@ public class App
         System.out.println( "Hello World!" );
 
         Console con = System.console();
-        String name = con.readLine("\nWhat is your name?");
+        String name = con.readLine("\nWhat is your name?\n");
 
         if (name.length() > 0) {
             System.out.printf("\nNice to meet you, %s", name);
@@ -34,7 +34,7 @@ public class App
 
 		// Slide 17
 
-		String input = con.readLine("\nWhat is your hobby?");
+		String input = con.readLine("\nWhat is your hobby?\n");
 		input.trim(); // "    swim      " ---> "swim"
 
 		if (input.equals("swim")) {
